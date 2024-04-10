@@ -1,6 +1,7 @@
 import React from 'react'
 import './Post.css'
-export default function() {
+export default function({post}) {
+    console.log(post)
   return (
     <>
     <div className="post">
