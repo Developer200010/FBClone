@@ -1,39 +1,53 @@
-import React from 'react'
-import './Post.css'
-export default function({post}) {
-    console.log(post)
+import React, { useState } from "react";
+import "./Post.css";
+import {User} from '../../DummyData.js'
+export default function ({ post }) {
+  const [like, setLike] = useState(post.like);
+  const [isLiked, setIsLiked] = useState(false);
+  const likeHandler = () =>{
+    setLike(isLiked? like-1:like+1);
+    setIsLiked(!isLiked);
+  }
   return (
     <>
-    <div className="post">
+      <div className="post">
         <div className="postWrapper">
-        <div className="postTop">
+          <div className="postTop">
             <div className="postTopLeft">
-                <img src="https://cdn.pixabay.com/photo/2023/12/20/07/04/clouds-8459053_640.jpg" alt="" className='postProfileImg' />
-                <span className='postUserName'>jhon</span>
-                <span className="postDate">5 mins ago</span>
+              <img
+                src={User.filter((u)=>u.id === post?.userId)[0].profilePicture}
+                alt=""
+                className="postProfileImg"
+              />
+              <span className="postUserName">{User.filter((u)=>u.id === post?.userId)[0].username}</span>
+              <span className="postDate">{post.date}</span>
             </div>
             <div className="postTopRight">
-            <i class="fa-solid fa-ellipsis-vertical postTopIcon"></i>
+              <i class="fa-solid fa-ellipsis-vertical postTopIcon"></i>
             </div>
-        </div>
-        <div className="postCenter">
-            <span className="postText">It's my first img</span>
-            <img src="https://cdn.pixabay.com/photo/2021/01/22/18/09/windy-5940755_640.png" className='postCenterImg' alt="" />
-        </div>
-        <div className="postLeft">
+          </div>
+          <div className="postCenter">
+            <span className="postText">{post?.desc}</span>
+            <img
+              src={post.photo}
+              className="postCenterImg"
+              alt=""
+            />
+          </div>
+          <div className="postLeft">
             <div className="postButton">
-                <div className="postButtonLeft">
-                <i class="fa-regular fa-heart  likeIcon"></i>
-                <i class="fa-regular fa-thumbs-up likeIcon"></i>
-                <span className='postLikeText'>32 people liked it</span>
-                </div>
-                <div className="postButtonRight">
-                    <span className="postCommentText">9 comment</span>
-                </div>
+              <div className="postButtonLeft">
+                <i class="fa-regular fa-heart  likeIcon" onClick={likeHandler}></i>
+                <i class="fa-regular fa-thumbs-up likeIcon" onClick={likeHandler}></i>
+                <span className="postLikeText">{like} people liked it</span>
+              </div>
+              <div className="postButtonRight">
+                <span className="postCommentText">{post.Comment} comment</span>
+              </div>
             </div>
+          </div>
         </div>
-        </div>
-    </div>
+      </div>
     </>
-  )
+  );
 }

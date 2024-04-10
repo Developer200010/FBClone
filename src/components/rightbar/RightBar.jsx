@@ -1,5 +1,8 @@
 import React from 'react'
 import './RightBar.css'
+import {User} from '../../DummyData.js'
+import UserName from '../../onlineFriend/UserName.jsx'
+
 const RightBar = () => {
   return (
     <div className='rightbar'>
@@ -13,48 +16,9 @@ const RightBar = () => {
         <img src="https://cdn.pixabay.com/photo/2023/04/09/11/05/mountains-7911302_640.jpg" className='adImg' alt="" />
         <h4 className='rightbarTitle'>Online Friends</h4>
         <ul className="rightbarFriendList">
-          <li className="rightbarFriend">
-            <div className="rightbarProfileImgContainer">
-              <img src="https://cdn.pixabay.com/photo/2023/10/30/19/10/clouds-8353592_640.jpg" className='rightbarProfileImg' alt="" />
-            <span className="rightbarOnline"></span>
-            </div>
-            <span className="rightbarUsername">john</span>
-          </li>
-          <li className="rightbarFriend">
-            <div className="rightbarProfileImgContainer">
-              <img src="https://cdn.pixabay.com/photo/2023/10/30/19/10/clouds-8353592_640.jpg" className='rightbarProfileImg' alt="" />
-            <span className="rightbarOnline"></span>
-            </div>
-            <span className="rightbarUsername">john</span>
-          </li>
-          <li className="rightbarFriend">
-            <div className="rightbarProfileImgContainer">
-              <img src="https://cdn.pixabay.com/photo/2023/10/30/19/10/clouds-8353592_640.jpg" className='rightbarProfileImg' alt="" />
-            <span className="rightbarOnline"></span>
-            </div>
-            <span className="rightbarUsername">john</span>
-          </li>
-          <li className="rightbarFriend">
-            <div className="rightbarProfileImgContainer">
-              <img src="https://cdn.pixabay.com/photo/2023/10/30/19/10/clouds-8353592_640.jpg" className='rightbarProfileImg' alt="" />
-            <span className="rightbarOnline"></span>
-            </div>
-            <span className="rightbarUsername">john</span>
-          </li>
-          <li className="rightbarFriend">
-            <div className="rightbarProfileImgContainer">
-              <img src="https://cdn.pixabay.com/photo/2023/10/30/19/10/clouds-8353592_640.jpg" className='rightbarProfileImg' alt="" />
-            <span className="rightbarOnline"></span>
-            </div>
-            <span className="rightbarUsername">john</span>
-          </li>
-          <li className="rightbarFriend">
-            <div className="rightbarProfileImgContainer">
-              <img src="https://cdn.pixabay.com/photo/2023/10/30/19/10/clouds-8353592_640.jpg" className='rightbarProfileImg' alt="" />
-            <span className="rightbarOnline"></span>
-            </div>
-            <span className="rightbarUsername">john</span>
-          </li>
+        {User.map((u)=>(
+          <UserName key={u.id} user={u}/>
+        ))}
         </ul>
       </div>
     </div>

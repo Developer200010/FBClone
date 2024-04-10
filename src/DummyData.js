@@ -1,4 +1,4 @@
-export const data = [
+export const User = [
     {
         id:1,
         profilePicture:"https://cdn.pixabay.com/photo/2016/05/01/17/32/sky-1365325_640.jpg",
@@ -7,32 +7,32 @@ export const data = [
     {
         id:2,
         profilePicture:"https://cdn.pixabay.com/photo/2016/05/01/17/32/sky-1365325_640.jpg",
-        username:"jhon"
+        username:"hena"
     },
     {
         id:3,
         profilePicture:"https://cdn.pixabay.com/photo/2016/05/01/17/32/sky-1365325_640.jpg",
-        username:"jhon"
+        username:"rock"
     },
     {
         id:4,
         profilePicture:"https://cdn.pixabay.com/photo/2016/05/01/17/32/sky-1365325_640.jpg",
-        username:"jhon"
+        username:"hhh"
     },
     {
         id:5,
         profilePicture:"https://cdn.pixabay.com/photo/2016/05/01/17/32/sky-1365325_640.jpg",
-        username:"jhon"
+        username:"lion"
     },
     {
         id:6,
         profilePicture:"https://cdn.pixabay.com/photo/2016/05/01/17/32/sky-1365325_640.jpg",
-        username:"jhon"
+        username:"kind"
     },
     {
         id:7,
         profilePicture:"https://cdn.pixabay.com/photo/2016/05/01/17/32/sky-1365325_640.jpg",
-        username:"jhon"
+        username:"pop"
     },
 
 ]
@@ -51,7 +51,7 @@ export const Posts = [
         desc:"love for all, Hatred for none",
         photo: "https://cdn.pixabay.com/photo/2016/11/19/17/56/clouds-1840568_640.jpg",
         userId:2,
-        like:32,
+        like:36,
         Comment:9,
     },
     {
@@ -59,7 +59,7 @@ export const Posts = [
         desc:"love for all, Hatred for none",
         photo: "https://cdn.pixabay.com/photo/2016/11/19/17/56/clouds-1840568_640.jpg",
         userId:3,
-        like:32,
+        like:7,
         Comment:9,
     },
     {
@@ -67,7 +67,7 @@ export const Posts = [
         desc:"love for all, Hatred for none",
         photo: "https://cdn.pixabay.com/photo/2016/11/19/17/56/clouds-1840568_640.jpg",
         userId:4,
-        like:32,
+        like:3,
         Comment:9,
     },
     {
@@ -75,7 +75,7 @@ export const Posts = [
         desc:"love for all, Hatred for none",
         photo: "https://cdn.pixabay.com/photo/2016/11/19/17/56/clouds-1840568_640.jpg",
         userId:5,
-        like:32,
+        like:2,
         Comment:9,
     },
     {
@@ -83,7 +83,7 @@ export const Posts = [
         desc:"love for all, Hatred for none",
         photo: "https://cdn.pixabay.com/photo/2016/11/19/17/56/clouds-1840568_640.jpg",
         userId:6,
-        like:32,
+        like:392,
         Comment:9,
     },
     {

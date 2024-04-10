@@ -1,5 +1,7 @@
 import React from "react";
 import "./SideBar.css";
+import {User} from '../../DummyData.js'
+import CloseFriend from "../../closeFriend/CloseFriend.jsx";
 const SideBar = () => {
   return (
     <div className="sidebar">
@@ -45,54 +47,9 @@ const SideBar = () => {
         <button className="sidebarButton">Show more</button>
         <hr className="sidebarLine"/>
         <ul className="sidebarFriendList">
-          <li className="sidebarFriend">
-            <img src="https://cdn.pixabay.com/photo/2020/10/09/13/12/man-5640540_640.jpg" alt="" className="sidebarFriendImg" />
-            <span className="sidebarFriendName">jhon</span>
-          </li>
-          <li className="sidebarFriend">
-            <img src="https://cdn.pixabay.com/photo/2020/10/09/13/12/man-5640540_640.jpg" alt="" className="sidebarFriendImg" />
-            <span className="sidebarFriendName">jhon</span>
-          </li>
-          <li className="sidebarFriend">
-            <img src="https://cdn.pixabay.com/photo/2020/10/09/13/12/man-5640540_640.jpg" alt="" className="sidebarFriendImg" />
-            <span className="sidebarFriendName">jhon</span>
-          </li>
-          <li className="sidebarFriend">
-            <img src="https://cdn.pixabay.com/photo/2020/10/09/13/12/man-5640540_640.jpg" alt="" className="sidebarFriendImg" />
-            <span className="sidebarFriendName">jhon</span>
-          </li>
-          <li className="sidebarFriend">
-            <img src="https://cdn.pixabay.com/photo/2020/10/09/13/12/man-5640540_640.jpg" alt="" className="sidebarFriendImg" />
-            <span className="sidebarFriendName">jhon</span>
-          </li>
-          <li className="sidebarFriend">
-            <img src="https://cdn.pixabay.com/photo/2020/10/09/13/12/man-5640540_640.jpg" alt="" className="sidebarFriendImg" />
-            <span className="sidebarFriendName">jhon</span>
-          </li>
-          <li className="sidebarFriend">
-            <img src="https://cdn.pixabay.com/photo/2020/10/09/13/12/man-5640540_640.jpg" alt="" className="sidebarFriendImg" />
-            <span className="sidebarFriendName">jhon</span>
-          </li>
-          <li className="sidebarFriend">
-            <img src="https://cdn.pixabay.com/photo/2020/10/09/13/12/man-5640540_640.jpg" alt="" className="sidebarFriendImg" />
-            <span className="sidebarFriendName">jhon</span>
-          </li>
-          <li className="sidebarFriend">
-            <img src="https://cdn.pixabay.com/photo/2020/10/09/13/12/man-5640540_640.jpg" alt="" className="sidebarFriendImg" />
-            <span className="sidebarFriendName">jhon</span>
-          </li>
-          <li className="sidebarFriend">
-            <img src="https://cdn.pixabay.com/photo/2020/10/09/13/12/man-5640540_640.jpg" alt="" className="sidebarFriendImg" />
-            <span className="sidebarFriendName">jhon</span>
-          </li>
-          <li className="sidebarFriend">
-            <img src="https://cdn.pixabay.com/photo/2020/10/09/13/12/man-5640540_640.jpg" alt="" className="sidebarFriendImg" />
-            <span className="sidebarFriendName">jhon</span>
-          </li>
-          <li className="sidebarFriend">
-            <img src="https://cdn.pixabay.com/photo/2020/10/09/13/12/man-5640540_640.jpg" alt="" className="sidebarFriendImg" />
-            <span className="sidebarFriendName">jhon</span>
-          </li>
+          {User.map((u)=>(
+            <CloseFriend key={u.id} user={u}/>
+          ))}
         </ul>
       </div>
     </div>
