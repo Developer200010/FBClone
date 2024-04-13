@@ -1,9 +1,9 @@
 import React from 'react'
 import './Profile.css'
-import Topbar from '../../../components/topbar/Topbar'
-import SideBar from '../../../components/sidebar/SideBar'
-import Feed from '../../../components/feed/Feed'
-import RightBar from '../../../components/rightbar/RightBar'
+import Topbar from '../../components/topbar/Topbar'
+import SideBar from '../../components/sidebar/SideBar'
+import Feed from '../../components/feed/Feed'
+import RightBar from '../../components/rightbar/RightBar'
 export default function Profile() {
   return (
     <>
@@ -21,7 +21,7 @@ export default function Profile() {
     </div>
     <div className="profileRightBottom">
     <Feed/>
-    <RightBar/>
+    <RightBar profile/>
     </div>
     </div>
     </div>

@@ -3,6 +3,7 @@ import './RightBar.css'
 import {User} from '../../DummyData.js'
 import UserName from '../../onlineFriend/UserName.jsx'
 
+
 const HomeRightBar= () =>{
   return(
     <>
@@ -68,11 +69,11 @@ const ProfileRightBar = () =>{
   )
 }
 
-const RightBar = () => {
+const RightBar = ({profile}) => {
   return (
     <div className='rightbar'>
       <div className="rightbarWrapper">
-       <ProfileRightBar/>
+       {profile?<ProfileRightBar/>:<HomeRightBar/>}
       </div>
     </div>
   )
